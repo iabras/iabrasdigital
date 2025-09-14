@@ -2,11 +2,15 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="google-site-verification" content="cWnd0U3LNv9lmEYuKBfob5nVeyyjRu1CBEjKvTGOTpk" />
+    <meta name="msvalidate.01" content="FD1A3CC8FD94416D5C65EB28BC869FEF" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IA BRAS DIGITAL</title>
-    <!-- Inclui a biblioteca Tailwind CSS -->
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Define a fonte personalizada Inter do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -28,19 +32,6 @@
         }
 
         /* --- Animações Modernas --- */
-
-        /* Classes para o efeito de fade-in nas seções */
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Classe que ativa a transição quando a seção está visível */
-        .is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
         
         /* Animação para os títulos principais da hero section */
         .animated-hero-text {
@@ -89,10 +80,8 @@
 </head>
 <body class="text-gray-800">
 
-    <!-- Seção do Cabeçalho e Navegação -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logo da Empresa -->
             <a href="#" class="flex items-center space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -100,7 +89,6 @@
                 <span class="text-2xl font-bold text-gray-900">IA BRAS DIGITAL</span>
             </a>
             
-            <!-- Menu de Navegação para Desktop -->
             <ul class="hidden md:flex space-x-6">
                 <li><a href="#servicos" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">Serviços</a></li>
                 <li><a href="#criação-de-sites" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">Criação de Sites</a></li>
@@ -109,7 +97,6 @@
                 <li><a href="#contato" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">Contato</a></li>
             </ul>
             
-            <!-- Botão do menu para mobile -->
             <button id="menu-button" class="md:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -117,7 +104,6 @@
             </button>
         </nav>
 
-        <!-- Menu para dispositivos móveis -->
         <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform -translate-x-full transition-transform duration-300 ease-in-out">
             <div class="flex justify-between items-center p-4 shadow-md">
                 <a href="#" class="flex items-center space-x-2">
@@ -142,11 +128,9 @@
         </div>
     </header>
 
-    <!-- Seção Principal (Hero Section) -->
     <main>
         <section class="bg-gray-100 py-20 md:py-32">
             <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-                <!-- Conteúdo da Seção Principal -->
                 <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
                     <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight animated-hero-text">
                         Transforme sua presença online com a <span class="text-indigo-600">IA BRAS DIGITAL</span>.
@@ -159,14 +143,12 @@
                         <a href="#contato" class="btn-secondary">Fale Conosco</a>
                     </div>
                 </div>
-                <!-- Vídeo de Demonstração -->
-                <div class="md:w-1/2 flex justify-center mt-8 md:mt-0 fade-in-section">
+                <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
                     <div class="relative w-full" style="padding-bottom: 56.25%;">
                         <iframe 
                             class="absolute top-0 left-0 w-full h-full rounded-xl shadow-2xl" 
                             src="https://www.youtube.com/embed/P6-8TYGWl68" 
                             title="Marketing 2025. As 6 Estratégias que realmente funcionam este ano" 
-                            frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
                         </iframe>
@@ -175,15 +157,13 @@
             </div>
         </section>
 
-        <!-- Seção de Serviços -->
-        <section id="servicos" class="py-20 md:py-24 fade-in-section">
+        <section id="servicos" class="py-20 md:py-24">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nossos Serviços de Marketing</h2>
                 <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
                     Oferecemos uma gama completa de soluções para ajudar seu negócio a crescer e se destacar no mercado.
                 </p>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Cartão de Serviço 1 -->
                     <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 3h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2zM9 12h6" />
@@ -193,17 +173,15 @@
                             Aumente a visibilidade do seu site nos resultados de busca do Google e atraia tráfego qualificado.
                         </p>
                     </div>
-                    <!-- Cartão de Serviço 2 -->
                     <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a4 4 0 014-4h12a2 2 0 002-2v-1a2 2 0 00-2-2h-3a2 2 0 00-2-2h-2m-2-4a4 4 0 110 5.292" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h-10a4 4 0 01-4-4V8a4 4 0 014-4h10a4 4 0 014 4v8a4 4 0 01-4 4zM12 11a4 4 0 100 8 4 4 0 000-8z" />
                         </svg>
                         <h3 class="mt-4 text-xl font-semibold text-gray-900">Gestão de Mídias Sociais</h3>
                         <p class="mt-2 text-gray-600">
                             Construa uma comunidade engajada e forte presença nas redes sociais.
                         </p>
                     </div>
-                    <!-- Cartão de Serviço 3 -->
                     <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5a1 1 0 01-1.414 1.414l-5-5a1 1 0 01-1.414-1.414z" />
@@ -213,17 +191,15 @@
                             Crie conteúdo relevante e valioso para atrair e converter seu público-alvo.
                         </p>
                     </div>
-                    <!-- Novo Cartão 1: Criação de Artes Gráficas -->
                     <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 12.536L19 16l-3.536 3.536-1.5-1.5L16 16l-3.5-3.5zM12 6.5l-3.5 3.5L12 13.5l3.5-3.5L12 6.5zM18 12.5a.5.5 0 11-1 0 .5.5 0 011 0zm-6 6a.5.5 0 11-1 0 .5.5 0 011 0zm-6-6a.5.5 0 11-1 0 .5.5 0 011 0zm6-6a.5.5 0 11-1 0 .5.5 0 011 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a2 2 0 01-2-2v-4a2 2 0 012-2h10a2 2 0 012 2v4a2 2 0 01-2 2H7zM12 11V3m0 8l-3 3m3-3l3 3m-2-3a.5.5 0 11-1 0 .5.5 0 011 0z" />
                         </svg>
                         <h3 class="mt-4 text-xl font-semibold text-gray-900">Criação de Artes Gráficas</h3>
                         <p class="mt-2 text-gray-600">
                             Desenvolvemos sua identidade visual, logos, banners e materiais de divulgação que se destacam.
                         </p>
                     </div>
-                    <!-- Novo Cartão 2: Consultoria Digital -->
                     <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.518.314 1.171.42 1.82.357z" />
@@ -233,7 +209,6 @@
                             Analisamos seu negócio e criamos um plano de ação completo para otimizar sua estratégia online.
                         </p>
                     </div>
-                    <!-- Novo Cartão 3: Suporte Técnico -->
                     <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -247,25 +222,22 @@
             </div>
         </section>
 
-        <!-- Seção de Criação de Sites -->
-        <section id="criação-de-sites" class="bg-gray-100 py-20 md:py-24 fade-in-section">
+        <section id="criação-de-sites" class="bg-gray-100 py-20 md:py-24">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Criação de Sites Modernos</h2>
                 <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
                     Nós construímos a base da sua presença digital com sites que são mais do que bonitos: eles são rápidos, responsivos e otimizados para qualquer dispositivo e navegador.
                 </p>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Cartão de Recurso 1 -->
                     <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1.75-3m6.25-10a4 4 0 10-8 0h8z" />
+                        <svg class="h-12 w-12 text-indigo-600 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0h-3.375m0 0a.75.75 0 01-.75-.75V3m0 0h-3.5a.75.75 0 01-.75.75V3m-2.25 0H7.5" />
                         </svg>
                         <h3 class="mt-4 text-xl font-semibold text-gray-900">Design Responsivo</h3>
                         <p class="mt-2 text-gray-600">
                             Sites que se adaptam perfeitamente a telas de desktops, tablets e smartphones, garantindo a melhor experiência.
                         </p>
                     </div>
-                    <!-- Cartão de Recurso 2 -->
                     <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -275,7 +247,6 @@
                             Desenvolvemos sites ultrarrápidos para reduzir a taxa de rejeição e melhorar o SEO.
                         </p>
                     </div>
-                    <!-- Cartão de Recurso 3 -->
                     <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5-6l3 3-3 3M17 4h3a2 2 0 012 2v14a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h3" />
@@ -289,10 +260,8 @@
             </div>
         </section>
 
-        <!-- Seção Sobre Nós -->
-        <section id="sobre-nos" class="py-20 md:py-24 fade-in-section">
+        <section id="sobre-nos" class="py-20 md:py-24">
             <div class="container mx-auto px-4 flex flex-col md:flex-row-reverse items-center">
-                <!-- Conteúdo da Seção Sobre Nós -->
                 <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 md:pl-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Sobre a IA BRAS DIGITAL</h2>
                     <p class="mt-4 text-lg text-gray-600">
@@ -302,14 +271,12 @@
                         Nossa missão é ser a ponte entre sua marca e seu público, construindo relacionamentos duradouros e impulsionando o crescimento de forma sustentável.
                     </p>
                 </div>
-                <!-- Vídeo de Demonstração (Equipe) -->
-                <div class="md:w-1/2 flex justify-center mt-8 md:mt-0 fade-in-section">
+                <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
                     <div class="relative w-full" style="padding-bottom: 56.25%;">
                         <iframe 
                             class="absolute top-0 left-0 w-full h-full rounded-xl shadow-2xl" 
                             src="https://www.youtube.com/embed/YuTxXSUj0n8" 
                             title="O que um profissional de Marketing faz?" 
-                            frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
                         </iframe>
@@ -318,15 +285,13 @@
             </div>
         </section>
 
-        <!-- Seção de Portfólio (Mock) -->
-        <section id="portfolio" class="py-20 md:py-24 fade-in-section">
+        <section id="portfolio" class="py-20 md:py-24">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nosso Portfólio</h2>
                 <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
                     Confira alguns dos projetos que ajudamos a decolar.
                 </p>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Item de Portfólio 1 -->
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover-effect">
                         <img src="https://placehold.co/500x350/a181e6/6a3d93?text=Projeto+A" alt="Projeto A" class="w-full h-48 object-cover">
                         <div class="p-6">
@@ -334,7 +299,6 @@
                             <p class="mt-2 text-gray-600">Estratégia completa de marketing digital, incluindo SEO e campanhas de anúncios.</p>
                         </div>
                     </div>
-                    <!-- Item de Portfólio 2 -->
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover-effect">
                         <img src="https://placehold.co/500x350/a181e6/6a3d93?text=Projeto+B" alt="Projeto B" class="w-full h-48 object-cover">
                         <div class="p-6">
@@ -342,7 +306,6 @@
                             <p class="mt-2 text-gray-600">Campanha de lançamento, gestão de redes sociais e inbound marketing.</p>
                         </div>
                     </div>
-                    <!-- Item de Portfólio 3 -->
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover-effect">
                         <img src="https://placehold.co/500x350/a181e6/6a3d93?text=Projeto+C" alt="Projeto C" class="w-full h-48 object-cover">
                         <div class="p-6">
@@ -354,34 +317,30 @@
             </div>
         </section>
 
-        <!-- Seção Final de Contato (CTA) -->
-        <section id="contato" class="py-20 md:py-24 fade-in-section">
+        <section id="contato" class="py-20 md:py-24">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Pronto para Começar?</h2>
                 <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
                     Não perca mais tempo. Aumente seu alcance, atraia novos clientes e transforme seu negócio com nossas estratégias digitais. Oferecemos atendimento online ou presencial para nos adaptarmos à sua necessidade.
                 </p>
-                <a href="mailto:erosribeiro7@gmail.com" class="btn-primary mt-8">Entre em Contato Agora</a>
+                <a href="mailto:iabras_digital@outlook.com.br" class="btn-primary mt-8">Entre em Contato Agora</a>
             </div>
         </section>
     </main>
 
-    <!-- Rodapé -->
     <footer class="bg-gray-900 text-gray-300 py-12">
         <div class="container mx-auto px-4 text-center md:text-left">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Informações de Contato -->
                 <div>
                     <h3 class="text-lg font-semibold text-white">IA BRAS DIGITAL</h3>
                     <p class="mt-2 text-sm">São Luís - MA</p>
-                    <p class="mt-2 text-sm">Email: erosribeiro7@gmail.com</p>
+                    <p class="mt-2 text-sm">Email: iabras_digital@outlook.com.br</p>
                     <p class="mt-2 text-sm flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2.87c-5.46 0-9.91 4.45-9.91 9.92 0 1.62.43 3.14 1.25 4.54l-1.31 4.79 4.93-1.29c1.32.74 2.8 1.15 4.93 1.15 5.46 0 9.91-4.45 9.91-9.92 0-5.46-4.45-9.91-9.91-9.91zm.01 1.5c4.64 0 8.41 3.77 8.41 8.41 0 4.64-3.77 8.41-8.41 8.41-1.42 0-2.81-.36-4.04-1.05l-2.9 0.76.77-2.82c-.75-1.28-1.15-2.73-1.15-4.18 0-4.65 3.78-8.41 8.41-8.41zm-2.03 3.99c-.19 0-.44-.06-.65-.06-.19 0-.21-.01-.42-.01-.22 0-.29-.02-.4-.06-.11-.04-.2-.08-.34-.11-.12-.03-.23-.04-.33-.04-.15 0-.27.02-.45.09-.16.06-.31.14-.42.2-.12.07-.23.15-.34.22-.11.07-.2.15-.29.21-.09.06-.15.11-.2.15l-.13.09c-.04.03-.07.06-.1.08-.1.07-.16.14-.2.17-.07.05-.15.1-.21.14-.14.1-.27.21-.38.31-.13.11-.27.24-.41.38-.13.13-.26.26-.39.4-.13.13-.24.27-.34.41-.09.13-.19.26-.27.39-.08.12-.15.24-.21.36-.06.12-.12.25-.17.39-.05.13-.1.27-.14.41s-.07.28-.09.43c-.02.15-.03.31-.03.48 0 .19.01.38.03.56.03.18.06.35.12.51.05.16.1.31.18.45.08.15.17.29.28.43.11.13.24.26.37.38.13.13.27.25.42.36.15.11.31.22.48.33.16.1.33.2.5.28.18.09.37.16.55.22.18.06.36.1.54.12.18.02.37.03.56.03.19 0 .38-.01.57-.03.19-.02.38-.05.58-.09.19-.05.38-.11.58-.19.19-.07.39-.16.59-.26.19-.11.39-.23.59-.36.2-.14.4-.28.58-.44.19-.15.37-.31.54-.48.17-.16.32-.33.45-.5.14-.17.26-.34.36-.51.1-.17.18-.34.25-.51.07-.17.12-.34.15-.51.03-.17.05-.34.05-.51s-.02-.34-.05-.51c-.03-.17-.08-.34-.15-.51-.07-.17-.15-.34-.25-.51-.1-.17-.22-.34-.36-.51-.13-.17-.28-.33-.45-.49-.17-.16-.36-.31-.56-.44-.2-.14-.41-.26-.62-.36-.21-.1-.43-.18-.65-.24-.23-.07-.46-.11-.69-.11zm-.02 8.78c-1.42 0-2.58-.99-2.58-2.22 0-1.22 1.16-2.21 2.58-2.21 1.41 0 2.58.99 2.58 2.21 0 1.23-1.17 2.22-2.58 2.22z" /></svg>
                         (98) 9-8541-2311
                     </p>
                 </div>
                 
-                <!-- Links Úteis -->
                 <div>
                     <h3 class="text-lg font-semibold text-white">Links Rápidos</h3>
                     <ul class="mt-2 text-sm space-y-2">
@@ -393,27 +352,29 @@
                     </ul>
                 </div>
 
-                <!-- Redes Sociais -->
                 <div>
-                    <h3 class="text-lg font-semibold text-white">Siga-nos</h3>
+                    <h3 class="text-lg font-semibold text-white">Compartilhe</h3>
                     <div class="mt-2 flex justify-center md:justify-start space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-white transition duration-300" aria-label="Facebook">
-                            <!-- Ícone do Facebook -->
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22.5 12c0-5.717-4.583-10.334-10.25-10.334-5.666 0-10.25 4.617-10.25 10.334 0 5.178 3.737 9.593 8.604 10.264v-7.294h-2.58v-2.97h2.58v-2.19c0-2.564 1.55-3.968 3.844-3.968 1.107 0 2.055.082 2.336.119v2.69h-1.597c-1.258 0-1.503.597-1.503 1.474v1.944h2.955l-.426 2.97h-2.529v7.294c4.867-.671 8.604-5.086 8.604-10.264z" clip-rule="evenodd" /></svg>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://iabrasdigital.online/" target="_blank" class="text-gray-300 hover:text-white transition duration-300" aria-label="Compartilhar no Facebook">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.676 0c.731 0 1.324.593 1.324 1.324v21.352c0 .73-.593 1.324-1.324 1.324H1.324C.593 24 0 23.407 0 22.676V1.324C0 .593.593 0 1.324 0h21.352zM15.404 8.74h2.204V5.992h-3.414c-2.484 0-3.328 1.488-3.328 3.328v1.751h-2.204v3.136h2.204v7.352h3.298v-7.352h2.204l.331-3.136h-2.535v-1.751z"/>
+                            </svg>
                         </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition duration-300" aria-label="Twitter">
-                            <!-- Ícone do Twitter -->
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.5 12c0-5.717-4.583-10.334-10.25-10.334-5.666 0-10.25 4.617-10.25 10.334 0 5.178 3.737 9.593 8.604 10.264v-7.294h-2.58v-2.97h2.58v-2.19c0-2.564 1.55-3.968 3.844-3.968 1.107 0 2.055.082 2.336.119v2.69h-1.597c-1.258 0-1.503.597-1.503 1.474v1.944h2.955l-.426 2.97h-2.529v7.294c4.867-.671 8.604-5.086 8.604-10.264z" /></svg>
+                        <a href="https://twitter.com/intent/tweet?url=https://iabrasdigital.online/&text=Confira este site de marketing digital!" target="_blank" class="text-gray-300 hover:text-white transition duration-300" aria-label="Compartilhar no X (Twitter)">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.244 2.25h3.308l-7.227 8.261 8.502 11.239h-6.793l-5.656-7.517-4.134 7.517H2.28L8.726 10.1l-6.238-8.26h6.791zm-1.63 17.511h2.281L7.153 4.205H4.972z"/>
+                            </svg>
                         </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition duration-300" aria-label="Instagram">
-                            <!-- Ícone do Instagram -->
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c-3.175 0-3.58.012-4.834.07-.324.015-.65.056-.976.118-.328.064-.658.148-.988.256-.328.107-.656.23-1.002.376-.346.146-.68.31-1.026.495-.346.185-.68.39-1.006.62-.326.23-.628.49-.916.758-.287.267-.55.556-.798.868-.248.312-.468.65-.67 1.014-.202.365-.373.755-.51 1.16-.137.404-.242.82-.315 1.25-.073.43-.11.87-.133 1.31-.022.44-.029.89-.029 1.34s.007.9.029 1.34c.023.44.06.88.133 1.31.073.43.178.846.315 1.25.137.405.308-.795.51-1.16.202-.364.45-.71.698-1.014.248-.312.51-.6.798-.868.288-.268.58-.53.916-.758.326-.23.656-.45 1.002-.62.346-.185.68-.356 1.026-.495.346-.146.66-.269.988-.376.326-.107.652-.198.976-.256.324-.06.649.105.976.118 1.253.058 1.658.07 4.834.07s3.58-.012 4.834-.07c.324-.015.65-.056.976-.118.328-.064.658-.148.988-.256.328-.107.656.23-1.002.376-.346.146-.68.31-1.026.495-.346.185-.68.39-1.006.62-.326.23-.628.49-.916.758-.287.267-.55.556-.798.868-.248.312-.468.65-.67 1.014-.202.365-.373.755-.51 1.16-.137.404-.242.82-.315 1.25-.073.43-.11.87-.133 1.31-.022.44-.029.89-.029 1.34s-.007-.9-.029 1.34c.023.44.06.88.133 1.31.073.43.178-.846.315-1.25.137.405.308-.795.51-1.16.202-.364.45-.71.698-1.014.248-.312.51-.6.798-.868.288-.268.58-.53.916-.758.326-.23.656-.45 1.002-.62.346-.185.68-.356 1.026-.495.346-.146.66-.269.988-.376.326-.107.652-.198.976-.256.324-.06-1.253-.058-4.834-.058zm0-15.541c-.417 0-.756.339-.756.756s.339.756.756.756.756-.339.756-.756-.339-.756-.756-.756zM12 11.233c-2.091 0-3.791 1.699-3.791 3.79s1.7 3.791 3.791 3.791 3.791-1.7 3.791-3.791-1.7-3.79-3.791-3.79z" clip-rule="evenodd" /></svg>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://iabrasdigital.online/&title=IA BRAS DIGITAL&summary=A melhor agência de marketing digital&source=https://iabrasdigital.online/" target="_blank" class="text-gray-300 hover:text-white transition duration-300" aria-label="Compartilhar no LinkedIn">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.457h-3.328v-9.366c0-.853-.016-1.954-.121-2.826-.108-.871-.247-1.528-.69-2.012-.444-.484-1.077-.732-2.288-.732-1.745 0-2.906 1.405-2.906 3.454v9.481h-3.328v-10.871h3.18v1.543c.47-.89 1.054-1.63 1.815-2.08.761-.45 1.705-.68 2.83-.68 4.672 0 5.53 3.08 5.53 7.085v6.924h.015zM4.197 6.416a2.215 2.215 0 01-2.203-2.203c0-1.218 1.004-2.203 2.203-2.203 1.22 0 2.204.985 2.204 2.203s-1.004 2.203-2.204 2.203zm-1.868 14.041h3.737v-10.871h-3.737v10.871z"/>
+                            </svg>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="mt-8 text-center text-sm">
-                &copy; 2024 IA BRAS DIGITAL. Todos os direitos reservados.
+                © 2024 IA BRAS DIGITAL. Todos os direitos reservados.
             </div>
         </div>
     </footer>
@@ -435,55 +396,26 @@
             });
         });
 
-        // Lógica do Intersection Observer para o efeito de transição em cada seção
-        document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('.fade-in-section');
+        // Lógica para o menu mobile
+        const menuButton = document.getElementById('menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-            const observerOptions = {
-                root: null, // o viewport como a raiz
-                threshold: 0.2, // aciona quando 20% do elemento está visível
-                rootMargin: '0px'
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target); // Para de observar após a animação
-                    }
-                });
-            }, observerOptions);
-
-            // Observa cada seção
-            sections.forEach(section => {
-                observer.observe(section);
-            });
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('-translate-x-full');
         });
 
-        // Lógica para o menu mobile
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuButton = document.getElementById('menu-button');
-            const closeButton = document.getElementById('close-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-x-full');
+        });
 
-            // Abrir o menu
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.remove('-translate-x-full');
-            });
-
-            // Fechar o menu
-            closeButton.addEventListener('click', () => {
+        // Fechar menu mobile ao clicar em um link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
                 mobileMenu.classList.add('-translate-x-full');
             });
-
-            // Fechar o menu ao clicar em um link
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('-translate-x-full');
-                });
-            });
         });
+
     </script>
 </body>
 </html>
