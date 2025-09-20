@@ -157,13 +157,14 @@
                 </div>
                 <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
                     <div class="relative w-full" style="padding-bottom: 56.25%;">
-                        <iframe 
-                            class="absolute top-0 left-0 w-full h-full rounded-xl shadow-2xl" 
-                            src="https://www.youtube.com/embed/P6-8TYGWl68" 
-                            title="Marketing 2025. As 6 Estratégias que realmente funcionam este ano" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
+                        <img 
+                            src="assets/companhiabras.jpg" 
+                            alt="Uma equipe se reúne para planejar estratégias de marketing digital na IA BRAS DIGITAL" 
+                            title="Reunião de equipe de marketing digital"
+                            class="absolute top-0 left-0 w-full h-full rounded-xl shadow-2xl"
+                            width="1920" 
+                            height="1080" 
+                        />
                     </div>
                 </div>
             </div>
@@ -426,8 +427,8 @@
             mobileMenu.classList.add('-translate-x-full');
         });
 
-        // Fechar o menu mobile ao clicar em um link
-        mobileMenu.querySelectorAll('a').forEach(link => {
+        // Fechar o menu ao clicar em um link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('translate-x-0');
                 mobileMenu.classList.add('-translate-x-full');
