@@ -290,12 +290,13 @@
                 </div>
                 <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
                     <div class="relative w-full" style="padding-bottom: 56.25%;">
-                        <img 
-                            src="equipe-marketing-industrial-escritorio-33.webp" 
-                            alt="Equipe de marketing digital em reunião de planejamento em escritório com tela de gráficos" 
-                            title="Nossa equipe focada em resultados"
-                            class="w-full h-full rounded-xl shadow-2xl object-cover"
-                            loading="lazy">
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full rounded-xl shadow-2xl" 
+                            src="https://www.youtube.com/embed/YuTxXSUj0n8" 
+                            title="O que um profissional de Marketing faz?" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -417,30 +418,26 @@
                 }
             });
         });
-        
-        // JavaScript para o menu móvel
+
+        // Lógica para o menu mobile
         const menuButton = document.getElementById('menu-button');
         const closeMenuButton = document.getElementById('close-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
         menuButton.addEventListener('click', () => {
             mobileMenu.classList.remove('-translate-x-full');
-            mobileMenu.classList.add('translate-x-0');
         });
 
         closeMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.remove('translate-x-0');
             mobileMenu.classList.add('-translate-x-full');
         });
 
-        // Fechar o menu ao clicar em um link
+        // Fechar menu mobile ao clicar em um link
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                mobileMenu.classList.remove('translate-x-0');
                 mobileMenu.classList.add('-translate-x-full');
             });
         });
     </script>
-
 </body>
 </html>
