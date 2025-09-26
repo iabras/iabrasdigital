@@ -288,12 +288,18 @@
                 </div>
                 <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
                     <img 
-                        src="assets/imagem de ilustração.webp" 
+                        srcset="assets/imagem-ilustracao-400w.webp 400w, 
+                                assets/imagem-ilustracao-800w.webp 800w"
+                        sizes="(max-width: 767px) 100vw, 50vw" 
+                        src="assets/imagem-ilustracao-800w.webp" 
                         alt="Uma equipe de marketing digital da IA BRAS DIGITAL se reúne para discutir estratégias de negócios em uma sala de reuniões moderna." 
                         title="Reunião de Equipe de Marketing Digital da IA BRAS DIGITAL"
                         class="w-full h-auto rounded-xl shadow-2xl" 
+                        width="800"
+                        height="421"
+                        loading="lazy"
                     >
-                </div>
+                    </div>
             </div>
         </section>
 
@@ -412,27 +418,17 @@
                 </div>
             </div>
             <div class="mt-8 text-center text-sm">
-                © 2022 IA BRAS DIGITAL. Todos os direitos reservados.
+                © 2022 IA BRAS DIGITAL - Todos os direitos reservados.
             </div>
         </div>
     </footer>
 
     <script>
-        // JavaScript para o smooth-scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // JavaScript para o menu mobile
+        // Lógica do menu móvel
         const menuButton = document.getElementById('menu-button');
-        const closeMenuButton = document.getElementById('close-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
 
         menuButton.addEventListener('click', () => {
             mobileMenu.classList.remove('-translate-x-full');
@@ -441,20 +437,12 @@
         closeMenuButton.addEventListener('click', () => {
             mobileMenu.classList.add('-translate-x-full');
         });
-    </script>
-    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/68d2207e9a4a9819287401ae/1j5qcts3e';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('-translate-x-full');
+            });
+        });
+    </script>
 </body>
 </html>
