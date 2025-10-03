@@ -87,7 +87,10 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
 
-        /* Cor do ícone do WhatsApp */
+        /* ✅ ESTILO DO WHATSAPP FLUTUANTE REMOVIDO:
+        A classe ".whatsapp-icon" foi mantida porque ela é usada no rodapé.
+        Se houve outra classe como ".whatsapp-flutuante" ou similar, ela foi removida.
+        */
         .whatsapp-icon {
             color: #25D366;
         }
@@ -413,51 +416,54 @@
                         </a>
                         <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://iabrasdigital.online/&title=IA BRAS DIGITAL&summary=A melhor agência de marketing digital&source=https://iabrasdigital.online/" target="_blank" class="text-gray-300 hover:text-white transition duration-300" aria-label="Compartilhar no LinkedIn">
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20.447 20.457h-3.328v-9.366c0-.853-.016-1.954-.121-2.826-.108-.871-.247-1.487-.584-1.897-.336-.409-.812-.663-1.455-.779-.643-.116-1.503-.138-2.585-.121-1.082-.017-2.19.06-3.21.328v-9.183h3.328v3.25h.142c.42-.647.962-1.125 1.76-1.442.798-.317 1.745-.483 2.992-.483 3.42 0 5.487 2.12 5.487 6.467v10.08h-3.328v-1.666h-.044c-.426.647-.962 1.125-1.76 1.442-.798.317-1.745.483-2.992.483-3.42 0-5.487-2.12-5.487-6.467v-1.979h3.328v1.979c0 .853.016 1.954.121 2.826.108.871.247 1.487.584 1.897.336.409.812.663 1.455.779.643.116 1.503.138 2.585.121 1.082.017 2.19-.06 3.21-.328zM3.666 7.319c-.611 0-1.107-.496-1.107-1.107 0-.611.496-1.107 1.107-1.107.611 0 1.107.496 1.107 1.107 0 .611-.496 1.107-1.107 1.107zM3.666 8.426h0v12.031h-1.657v-12.031h1.657z"/>
+                                <path d="M20.447 20.457h-3.328v-9.366c0-.853-.016-1.954-.121-2.826-.108-.871-.247-1.487-.58-1.996-.334-.509-.809-.916-1.439-1.229-.629-.313-1.472-.47-2.529-.47-1.89 0-3.187.94-3.876 2.373-.688 1.433-.787 3.368-.787 5.068v9.366H6.173V8.718h3.197v1.385h.043c.427-.674.965-1.298 1.61-1.87 1.401-1.258 3.518-2.02 5.867-2.02 4.14 0 6.643 2.72 6.643 8.583v9.761h-.033zM3.467 5.923c0-1.18-.957-2.137-2.137-2.137S-.807 4.743-.807 5.923s.957 2.137 2.137 2.137 2.137-.957 2.137-2.137z" />
                             </svg>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container mx-auto px-4 mt-8 text-center text-sm border-t border-gray-700 pt-4">
-            <p>&copy; 2024 IA BRAS DIGITAL. Todos os direitos reservados.</p>
+            
+            <hr class="border-gray-700 my-8">
+
+            <div class="text-center text-sm">
+                <p>&copy; 2024 IA BRAS DIGITAL. Todos os direitos reservados. | Desenvolvido por <a href="https://iabrasdigital.online/" class="hover:text-white transition duration-300">IA BRAS DIGITAL</a></p>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Lógica do menu mobile
-        const menuButton = document.getElementById('menu-button');
-        const closeMenuButton = document.getElementById('close-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.remove('-translate-x-full');
+        document.getElementById('menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.remove('-translate-x-full');
         });
 
-        closeMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.add('-translate-x-full');
+        document.getElementById('close-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.add('-translate-x-full');
         });
 
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('-translate-x-full');
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('-translate-x-full');
             });
         });
 
-        // Adiciona o floating button do WhatsApp
-        const whatsappLink = document.createElement('a');
-        whatsappLink.href = 'https://api.whatsapp.com/send?phone=5598981122395&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20IA%20BRAS%20DIGITAL.';
-        whatsappLink.target = '_blank';
-        whatsappLink.className = 'fixed bottom-6 right-6 z-50 p-3 bg-green-500 rounded-full shadow-xl transition duration-300 hover:bg-green-600 transform hover:scale-110';
-        whatsappLink.setAttribute('aria-label', 'Fale conosco no WhatsApp');
-        whatsappLink.innerHTML = `
-            <svg class="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12.04 2.87c-5.46 0-9.91 4.45-9.91 9.92 0 1.62.43 3.14 1.25 4.54l-1.31 4.79 4.93-1.29c1.32.74 2.8 1.15 4.93 1.15 5.46 0 9.91-4.45 9.91-9.92 0-5.46-4.45-9.91-9.91-9.91zm.01 1.5c4.64 0 8.41 3.77 8.41 8.41 0 4.64-3.77 8.41-8.41 8.41-1.42 0-2.81-.36-4.04-1.05l-2.9 0.76.77-2.82c-.75-1.28-1.15-2.73-1.15-4.18 0-4.65 3.78-8.41 8.41-8.41zm-2.03 3.99c-.19 0-.44-.06-.65-.06-.19 0-.21-.01-.42-.01-.22 0-.29-.02-.4-.06-.11-.04-.2-.08-.34-.11-.12-.03-.23-.04-.33-.04-.15 0-.27.02-.45.09-.16.06-.31.14-.42.2-.12.07-.23.15-.34.22-.11.07-.2.15-.29.21-.09.06-.15.11-.2.15l-.13.09c-.04.03-.07.06-.1.08-.1.07-.16.14-.2.17-.07.05-.15.1-.21.14-.14.1-.27.21-.38.31-.13.11-.27.24-.41.38-.13.13-.26.26-.39.4-.13.13-.24.27-.34.41-.09.13-.19.26-.27.39-.08.12-.15.24-.21.36-.06.12-.12.25-.17.39-.05.13-.1.27-.14.41s-.07.28-.09.43c-.02.15-.03.31-.03.48 0 .19.01.38.03.56.03.18.06.35.12.51.05.16.1.31.18.45.08.15.17.29.28.43.11.13.24.26.37.38.13.13.27.25.42.36.15.11.31.22.48.33.16.1.33.2.5.28.18.09.37.16.55.22.18.06.36.1.54.12.18.02.37.03.56.03.19 0 .38-.01.57-.03.19-.02.38-.05.58-.09.19-.05.38-.11.58-.19.19-.07.39-.16.59-.26.19-.11.39-.23.59-.36.2-.14.4-.28.58-.44.19-.15.37-.31.54-.48.17-.16.32-.33.45-.5.14-.17.26-.34.36-.51.1-.17.18-.34.25-.51.07-.17.12-.34.15-.51.03-.17.05-.34.05-.51s-.02-.34-.05-.51c-.03-.17-.08-.34-.15-.51-.07-.17-.15-.34-.25-.51-.1-.17-.22-.34-.36-.51-.13-.17-.28-.33-.45-.49-.17-.16-.36-.31-.56-.44-.2-.14-.41-.26-.62-.36-.21-.1-.43-.18-.65-.24-.23-.07-.46-.11-.69-.11zm-.02 8.78c-1.42 0-2.58-.99-2.58-2.22 0-1.22 1.16-2.21 2.58-2.21 1.41 0 2.58.99 2.58 2.21 0 1.23-1.17 2.22-2.58 2.22z"/>
-            </svg>
-        `;
-        document.body.appendChild(whatsappLink);
+        // Adiciona a classe 'animated-hero-text' para iniciar a animação após o carregamento
+        document.querySelectorAll('.animated-hero-text, .animated-hero-btn').forEach(el => {
+            el.style.opacity = '1';
+        });
     </script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/68d2207e9a4a9819287401ae/1j5qcts3e';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
 </body>
 </html>
