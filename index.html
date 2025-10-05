@@ -1,148 +1,130 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="cWnd0U3LNv9lmEYuKBfob5nVeyyjRu1CBEjKvTGOTpk" />
-    <meta name="msvalidate.01" content="FD1A3CC8FD94416D5C65EB28BC869FEF" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IA BRAS DIGITAL - Agência de Marketing Digital e Criação de Sites</title>
-    <meta name="description" content="A IA BRAS DIGITAL é sua agência de marketing digital especializada em SEO, criação de sites, gestão de redes sociais e consultoria. Impulsione seu negócio em São Luís - MA.">
+    <title>IA BRAS DIGITAL | Marketing Digital, SEO e Criação de Sites</title>
+    <meta name="description" content="Transforme sua presença online com a IA BRAS DIGITAL. Oferecemos Criação de Sites Modernos, SEO, Gestão de Mídias e Consultoria Digital para alavancar seu negócio.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon-180x180.png">
-    <link rel="canonical" href="https://iabrasdigital.online/"/>
-
-    <meta property="og:title" content="IA BRAS DIGITAL - Agência de Marketing Digital">
-    <meta property="og:description" content="Construímos estratégias inovadoras para impulsionar sua marca e gerar resultados reais.">
-    <meta property="og:image" content="assets/og-image.png">
-    <meta property="og:url" content="https://www.iabrasdigital.online/">
-    <meta property="og:type" content="website">
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
     <style>
+        /* Define a fonte Poppins como padrão para todo o corpo */
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f9fc;
+            font-family: 'Poppins', sans-serif;
         }
-        /* Estilos personalizados para os botões e links */
+
+        /* Estilos de Botões - CORES ALTERADAS PARA VIOLET (ROXO VIBRANTE) */
         .btn-primary {
-            @apply px-8 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-lg transition duration-300 hover:bg-indigo-700 transform hover:scale-105;
+            @apply inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-semibold rounded-lg shadow-lg text-white bg-violet-600 hover:bg-violet-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500;
         }
         .btn-secondary {
-            @apply px-8 py-3 border border-indigo-600 text-indigo-600 font-semibold rounded-full transition duration-300 hover:bg-indigo-100 transform hover:scale-105;
-        }
-        /* Adiciona um smooth-scroll para a navegação */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* --- Animações Modernas --- */
-        
-        /* Animação para os títulos principais da hero section */
-        .animated-hero-text {
-            animation: fadeInAndScale 1s ease-out forwards;
-        }
-
-        @keyframes fadeInAndScale {
-            from {
-                opacity: 0;
-                transform: scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+            @apply inline-flex items-center justify-center px-8 py-3 border-2 border-violet-600 text-base font-semibold rounded-lg shadow-lg text-violet-600 bg-white hover:bg-violet-50 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500;
         }
         
-        /* Animação para os botões da hero section */
-        .animated-hero-btn {
-            animation: fadeInUp 0.8s ease-out forwards;
-            animation-delay: 0.5s;
-            opacity: 0;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Animação de hover para os cartões e itens */
+        /* Efeito de Hover em Cards - Borda Roxa Vibrante Aplicada (violet-300 normal, violet-600 no hover) */
         .card-hover-effect {
-            @apply transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl;
+            @apply transition duration-500 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl border border-violet-300 hover:border-violet-600;
         }
         
-        /* Adiciona sombra e leve elevação ao passar o mouse */
-        .card-hover-effect:hover {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        /* Animação do Hero Text (inicia escondido para evitar FOUC de animação) */
+        .animated-hero-text {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards 0.2s;
+        }
+        .animated-hero-btn {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards 0.5s;
         }
 
-        /* ✅ ESTILO DO WHATSAPP FLUTUANTE REMOVIDO:
-        A classe ".whatsapp-icon" foi mantida porque ela é usada no rodapé.
-        Se houve outra classe como ".whatsapp-flutuante" ou similar, ela foi removida.
-        */
-        .whatsapp-icon {
-            color: #25D366;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Efeito de Transição de Página (Fade In e Slide Up) */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        /* Classe que é adicionada pelo JavaScript para mostrar o elemento */
+        .is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Estilo para ícone do WhatsApp no rodapé */
+        .whatsapp-icon:hover {
+            color: #25d366; /* Cor do WhatsApp no hover */
+        }
+        
+        /* Menu Mobile - Padrão Tailwind para transition */
+        #mobile-menu {
+            transition: transform 0.3s ease-out;
         }
     </style>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="6609b872-4959-4d99-bed9-16434848e82a" data-blockingmode="auto" type="text/javascript"></script>
 </head>
-<body class="text-gray-800">
-
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2">
-                <img src="assets/logo.webp" alt="Logo IA BRAS DIGITAL" class="h-8 w-8">
-                <span class="text-2xl font-bold text-gray-900">IA BRAS DIGITAL</span>
+<body class="text-gray-900">
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            
+            <a href="#inicio" class="flex items-center space-x-2">
+                <img src="assets/logo.webp" alt="Logo IA BRAS DIGITAL, com ícone de inteligência artificial" class="h-8 w-8" width="32" height="32" loading="eager">
+                
+                <span class="text-2xl font-extrabold">
+                    <span class="text-violet-600">IA</span> 
+                    
+                    <span class="text-yellow-500">BRAS</span> 
+                    
+                    <span class="text-green-500">DIGITAL</span>
+                </span>
             </a>
             
-            <ul class="hidden md:flex space-x-6">
-                <li><a href="#inicio" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">Início</a></li>
-                <li><a href="#servicos" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">Serviços</a></li>
-                <li><a href="#criação-de-sites" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">Criação de Sites</a></li>
-                <li><a href="#sobre-nos" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">Sobre Nós</a></li>
-                <li><a href="blog.html" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">Nosso Blog</a></li>
-                <li><a href="#portfolio" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">Portfólio</a></li>
-                <li><a href="#contato" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">Contato</a></li>
-            </ul>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-gray-700 hover:text-violet-600 font-semibold transition duration-300">Início</a>
+                <a href="#servicos" class="text-gray-700 hover:text-violet-600 font-semibold transition duration-300">Serviços</a>
+                <a href="#criação-de-sites" class="text-gray-700 hover:text-violet-600 font-semibold transition duration-300">Criação de Sites</a>
+                <a href="#portfolio" class="text-gray-700 hover:text-violet-600 font-semibold transition duration-300">Portfólio</a>
+                <a href="#sobre-nos" class="text-gray-700 hover:text-violet-600 font-semibold transition duration-300">Sobre Nós</a>
+                <a href="#contato" class="text-gray-700 hover:text-violet-600 font-semibold transition duration-300">Contato</a>
+                <a href="blog.html" class="text-violet-600 font-extrabold hover:text-violet-800 transition duration-300">Blog</a>
+            </nav>
             
-            <button id="menu-button" class="md:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <button id="menu-button" class="md:hidden text-gray-700 hover:text-violet-600 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
-        </nav>
-
-        <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform -translate-x-full transition-transform duration-300 ease-in-out">
-            <div class="flex justify-between items-center p-4 shadow-md">
-                <a href="index.html" class="flex items-center space-x-2">
-                   <img src="assets/logo.webp" alt="Logo IA BRAS DIGITAL" class="h-8 w-8">
-                    <span class="text-2xl font-bold text-gray-900">IA BRAS DIGITAL</span>
-                </a>
-                <button id="close-menu-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
+        </div>
+        
+        <div id="mobile-menu" class="fixed top-0 left-0 h-full w-64 bg-white shadow-2xl transform -translate-x-full md:hidden z-50">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-xl font-bold text-violet-600">Menu</span>
+                    <button id="close-menu-button" class="text-gray-600 hover:text-violet-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <nav class="flex flex-col space-y-4">
+                    <a href="#inicio" class="text-gray-700 hover:text-violet-600 font-semibold transition duration-300">Início</a>
+                    <a href="#servicos" class="text-gray-700 hover:text-violet-600 font-semibold transition duration-300">Serviços</a>
+                    <a href="#criação-de-sites" class="text-gray-700 hover:text-violet-600 font-semibold transition duration-300">Criação de Sites</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-violet-600 font-semibold transition duration-300">Portfólio</a>
+                    <a href="#sobre-nos" class="text-gray-700 hover:text-violet-600 font-semibold transition duration-300">Sobre Nós</a>
+                    <a href="#contato" class="text-gray-700 hover:text-violet-600 font-semibold transition duration-300">Contato</a>
+                    <a href="blog.html" class="text-violet-600 font-extrabold hover:text-violet-800 transition duration-300">Blog</a>
+                </nav>
             </div>
-            <ul class="flex flex-col p-4 space-y-4 text-center">
-                <li><a href="#inicio" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium text-xl block py-4 border-b">Início</a></li>
-                <li><a href="#servicos" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium text-xl block py-4 border-b">Serviços</a></li>
-                <li><a href="#criação-de-sites" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium text-xl block py-4 border-b">Criação de Sites</a></li>
-                <li><a href="#sobre-nos" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium text-xl block py-4 border-b">Sobre Nós</a></li>
-                <li><a href="blog.html" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium text-xl block py-4 border-b">Nosso Blog</a></li>
-                <li><a href="#portfolio" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium text-xl block py-4 border-b">Portfólio</a></li>
-                <li><a href="#contato" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium text-xl block py-4 border-b">Contato</a></li>
-            </ul>
         </div>
     </header>
 
@@ -151,90 +133,94 @@
             <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
                     <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight animated-hero-text">
-                        Transforme sua presença online com a <span class="text-indigo-600">IA BRAS DIGITAL</span>.
+                        Transforme sua presença online com a <span class="text-violet-600">IA BRAS DIGITAL</span>.
                     </h1>
-                    <p class="mt-4 text-lg md:text-xl text-gray-600 animated-hero-text">
+                    <p class="mt-4 text-xl md:text-2xl font-medium text-gray-700 animated-hero-text">
                         Construímos estratégias inovadoras para impulsionar sua marca e gerar resultados reais.
                     </p>
-                    <div class="mt-8 flex justify-center md:justify-start space-x-4 animated-hero-btn">
+                    <div class="mt-10 flex justify-center md:justify-start space-x-6 animated-hero-btn">
                         <a href="#servicos" class="btn-primary">Nossos Serviços</a>
                         <a href="#contato" class="btn-secondary">Fale Conosco</a>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
-                    <div class="relative w-full" style="padding-bottom: 56.25%;">
-                        <img 
-                            src="assets/companhiabras.webp" 
-                            alt="Uma equipe se reúne para planejar estratégias de marketing digital na IA BRAS DIGITAL" 
-                            title="Reunião de equipe de marketing digital"
-                            class="absolute top-0 left-0 w-full h-full rounded-xl shadow-2xl"
-                            width="1920" 
-                            height="1080" 
-                        />
-                    </div>
+                    <img 
+                        src="assets/companhiabras.webp" 
+                        alt="Uma equipe se reúne para planejar estratégias de marketing digital na IA BRAS DIGITAL" 
+                        title="Reunião de equipe de marketing digital"
+                        class="w-full h-auto rounded-xl shadow-2xl" 
+                        width="1400"  
+                        height="788"   
+                        loading="eager" 
+                    />
                 </div>
             </div>
         </section>
 
-        <section id="servicos" class="py-20 md:py-24">
+        <section id="servicos" class="py-20 md:py-24 animate-on-scroll">
             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nossos Serviços de Marketing</h2>
-                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Nossos Serviços de Marketing</h2>
+                <p class="mt-4 text-xl font-medium text-gray-600 max-w-3xl mx-auto">
                     Oferecemos uma gama completa de soluções para ajudar seu negócio a crescer e se destacar no mercado.
                 </p>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div class="bg-white p-10 rounded-2xl shadow-xl card-hover-effect">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-violet-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 3h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2zM9 12h6" />
                         </svg>
-                        <h3 class="mt-4 text-xl font-semibold text-gray-900">SEO & Otimização</h3>
-                        <p class="mt-2 text-gray-600">
+                        <h3 class="mt-4 text-2xl font-bold text-gray-900">SEO & Otimização</h3>
+                        <p class="mt-3 text-base text-gray-600">
                             Aumente a visibilidade do seu site nos resultados de busca do Google e atraia tráfego qualificado.
                         </p>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    
+                    <div class="bg-white p-10 rounded-2xl shadow-xl card-hover-effect">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-violet-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h-10a4 4 0 01-4-4V8a4 4 0 014-4h10a4 4 0 014 4v8a4 4 0 01-4 4zM12 11a4 4 0 100 8 4 4 0 000-8z" />
                         </svg>
-                        <h3 class="mt-4 text-xl font-semibold text-gray-900">Gestão de Mídias Sociais</h3>
-                        <p class="mt-2 text-gray-600">
+                        <h3 class="mt-4 text-2xl font-bold text-gray-900">Gestão de Mídias Sociais</h3>
+                        <p class="mt-3 text-base text-gray-600">
                             Construa uma comunidade engajada e forte presença nas redes sociais.
                         </p>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+                    <div class="bg-white p-10 rounded-2xl shadow-xl card-hover-effect">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-violet-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5a1 1 0 01-1.414 1.414l-5-5a1 1 0 01-1.414-1.414z" />
                         </svg>
-                        <h3 class="mt-4 text-xl font-semibold text-gray-900">Marketing de Conteúdo</h3>
-                        <p class="mt-2 text-gray-600">
+                        <h3 class="mt-4 text-2xl font-bold text-gray-900">Marketing de Conteúdo</h3>
+                        <p class="mt-3 text-base text-gray-600">
                             Crie conteúdo relevante e valioso para atrair e converter seu público-alvo.
                         </p>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+                    <div class="bg-white p-10 rounded-2xl shadow-xl card-hover-effect">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-violet-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a2 2 0 01-2-2v-4a2 2 0 012-2h10a2 2 0 012 2v4a2 2 0 01-2 2H7zM12 11V3m0 8l-3 3m3-3l3 3m-2-3a.5.5 0 11-1 0 .5.5 0 011 0z" />
                         </svg>
-                        <h3 class="mt-4 text-xl font-semibold text-gray-900">Criação de Artes Gráficas</h3>
-                        <p class="mt-2 text-gray-600">
+                        <h3 class="mt-4 text-2xl font-bold text-gray-900">Criação de Artes Gráficas</h3>
+                        <p class="mt-3 text-base text-gray-600">
                             Desenvolvemos sua identidade visual, logos, banners e materiais de divulgação que se destacam.
                         </p>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect flex flex-col items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+                    <div class="bg-white p-10 rounded-2xl shadow-xl card-hover-effect flex flex-col items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-violet-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                         </svg>
-                        <h3 class="mt-4 text-xl font-semibold text-gray-900">Consultoria Digital</h3>
-                        <p class="mt-2 text-gray-600 flex-grow">
+                        <h3 class="mt-4 text-2xl font-bold text-gray-900">Consultoria Digital</h3>
+                        <p class="mt-3 text-base text-gray-600 flex-grow">
                             Analisamos seu negócio e criamos um plano de ação completo para otimizar sua estratégia online.
                         </p>
-                        <a href="blog.html#artigo-consultoria" class="btn-primary mt-4">Saiba Mais</a>
+                        <a href="blog.html#artigo-consultoria" class="btn-primary mt-6">Saiba Mais</a>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    
+                    <div class="bg-white p-10 rounded-2xl shadow-xl card-hover-effect">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-violet-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <h3 class="mt-4 text-xl font-semibold text-gray-900">Suporte Técnico 24h</h3>
-                        <p class="mt-2 text-gray-600">
+                        <h3 class="mt-4 text-2xl font-bold text-gray-900">Suporte Técnico 24h</h3>
+                        <p class="mt-3 text-base text-gray-600">
                             Nossa equipe está disponível 24 horas por dia para garantir que suas plataformas funcionem perfeitamente.
                         </p>
                     </div>
@@ -242,37 +228,37 @@
             </div>
         </section>
 
-        <section id="criação-de-sites" class="bg-gray-100 py-20 md:py-24">
+        <section id="criação-de-sites" class="bg-gray-100 py-20 md:py-24 animate-on-scroll">
             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Criação de Sites Modernos</h2>
-                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Criação de Sites Modernos</h2>
+                 <p class="mt-4 text-xl font-medium text-gray-600 max-w-3xl mx-auto">
                     Nós construímos a base da sua presença digital com sites que são mais do que bonitos: eles são rápidos, responsivos e otimizados para qualquer dispositivo e navegador.
                 </p>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <svg class="h-12 w-12 text-indigo-600 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                     <div class="bg-white p-10 rounded-2xl shadow-xl card-hover-effect">
+                        <svg class="h-14 w-14 text-violet-600 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0h-3.375m0 0a.75.75 0 01-.75-.75V3m0 0h-3.5a.75.75 0 01-.75.75V3m-2.25 0H7.5" />
                         </svg>
-                        <h3 class="mt-4 text-xl font-semibold text-gray-900">Design Responsivo</h3>
-                        <p class="mt-2 text-gray-600">
+                        <h3 class="mt-4 text-2xl font-bold text-gray-900">Design Responsivo</h3>
+                        <p class="mt-3 text-base text-gray-600">
                             Sites que se adaptam perfeitamente a telas de desktops, tablets e smartphones, garantindo a melhor experiência.
                         </p>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                     <div class="bg-white p-10 rounded-2xl shadow-xl card-hover-effect">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-violet-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
-                        <h3 class="mt-4 text-xl font-semibold text-gray-900">Performance e Velocidade</h3>
-                        <p class="mt-2 text-gray-600">
+                        <h3 class="mt-4 text-2xl font-bold text-gray-900">Performance e Velocidade</h3>
+                        <p class="mt-3 text-base text-gray-600">
                             Desenvolvemos sites ultrarrápidos para reduzir a taxa de rejeição e melhorar o SEO.
                         </p>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg card-hover-effect">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                     <div class="bg-white p-10 rounded-2xl shadow-xl card-hover-effect">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-violet-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5-6l3 3-3 3M17 4h3a2 2 0 012 2v14a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h3" />
                         </svg>
-                        <h3 class="mt-4 text-xl font-semibold text-gray-900">Código Limpo e Otimizado</h3>
-                        <p class="mt-2 text-gray-600">
+                        <h3 class="mt-4 text-2xl font-bold text-gray-900">Código Limpo e Otimizado</h3>
+                        <p class="mt-3 text-base text-gray-600">
                             Utilizamos as melhores práticas de desenvolvimento para garantir compatibilidade e fácil manutenção.
                         </p>
                     </div>
@@ -280,14 +266,14 @@
             </div>
         </section>
 
-        <section id="sobre-nos" class="py-20 md:py-24">
+        <section id="sobre-nos" class="py-20 md:py-24 animate-on-scroll">
             <div class="container mx-auto px-4 flex flex-col md:flex-row-reverse items-center">
                 <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 md:pl-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Sobre a IA BRAS DIGITAL</h2>
-                    <p class="mt-4 text-lg text-gray-600">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Sobre a IA BRAS DIGITAL</h2>
+                    <p class="mt-4 text-xl font-medium text-gray-700">
                         Nós somos uma equipe apaixonada por tecnologia e inovação, dedicada a ajudar negócios a atingir seu potencial máximo. Com anos de experiência e uma abordagem focada em resultados, criamos estratégias personalizadas para cada cliente.
                     </p>
-                    <p class="mt-4 text-lg text-gray-600">
+                    <p class="mt-4 text-xl font-medium text-gray-700">
                         Nossa missão é ser a ponte entre sua marca e seu público, construindo relacionamentos duradouros e impulsionando o crescimento de forma sustentável.
                     </p>
                 </div>
@@ -297,7 +283,7 @@
                                 assets/imagem-ilustracao-800w.webp 800w"
                         sizes="(max-width: 767px) 100vw, 50vw" 
                         src="assets/imagem-ilustracao-800w.webp" 
-                        alt="Uma equipe de marketing digital da IA BRAS DIGITAL se reúne para discutir estratégias de negócios em uma sala de reuniões moderna." 
+                        alt="Ilustração de equipe de marketing digital trabalhando com gráficos e tecnologia" 
                         title="Reunião de Equipe de Marketing Digital da IA BRAS DIGITAL"
                         class="w-full h-auto rounded-xl shadow-2xl" 
                         width="800"
@@ -308,98 +294,111 @@
             </div>
         </section>
 
-        <section id="portfolio" class="py-20 md:py-24">
+        <section id="portfolio" class="bg-gray-50 py-20 md:py-24 animate-on-scroll">
             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nosso Portfólio</h2>
-                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Nosso Portfólio</h2>
+                 <p class="mt-4 text-xl font-medium text-gray-600 max-w-3xl mx-auto">
                     Confira alguns dos projetos que ajudamos a decolar.
                 </p>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover-effect">
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover-effect">
                         <img 
                             src="assets/ecommerce-moda.jpg" 
-                            alt="E-commerce de moda com roupas elegantes e design moderno, exibindo uma coleção de vestuário em um site responsivo." 
+                            alt="Tela de E-commerce de moda com design moderno e responsivo." 
                             title="Projeto de E-commerce de Moda"
                             width="500" 
                             height="350"
                             loading="lazy" 
                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900">E-commerce de Moda</h3>
-                            <p class="mt-2 text-gray-600">Estratégia completa de marketing digital, incluindo SEO e campanhas de anúncios.</p>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-900">E-commerce de Moda</h3>
+                            <p class="mt-3 text-base text-gray-600">Estratégia completa de marketing digital, incluindo SEO e campanhas de anúncios.</p>
                         </div>
                     </div>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover-effect">
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover-effect">
                         <img 
                             src="assets/lancamento-produto-tech.jpg" 
-                            alt="Lançamento de um produto tecnológico inovador, com elementos futuristas e interação digital em telas de computador e mobile." 
+                            alt="Campanha de lançamento para um produto tecnológico inovador." 
                             title="Projeto de Lançamento de Produto Tech"
                             width="500" 
                             height="350"
                             loading="lazy"
                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="mt-4 text-xl font-semibold text-gray-900">Lançamento de Produto Tech</h3>
-                            <p class="mt-2 text-gray-600">Campanha de lançamento, gestão de redes sociais e inbound marketing.</p>
+                        <div class="p-8">
+                            <h3 class="mt-4 text-2xl font-bold text-gray-900">Lançamento de Produto Tech</h3>
+                            <p class="mt-3 text-base text-gray-600">Campanha de lançamento, gestão de redes sociais e inbound marketing.</p>
                         </div>
                     </div>
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover-effect">
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover-effect">
                         <img 
                             src="assets/blog-viagens.jpg" 
-                            alt="Blog de viagens com imagens inspiradoras de destinos exóticos, mapas e artigos sobre aventuras e culturas, em um layout atraente." 
+                            alt="Design de blog de viagens otimizado com imagens inspiradoras." 
                             title="Projeto de Blog de Viagens"
                             width="500" 
                             height="350"
                             loading="lazy"
                             class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="mt-4 text-xl font-semibold text-gray-900">Blog de Viagens</h3>
-                            <p class="mt-2 text-gray-600">Otimização de SEO, criação de conteúdo e estratégias de monetização.</p>
+                        <div class="p-8">
+                            <h3 class="mt-4 text-2xl font-bold text-gray-900">Blog de Viagens</h3>
+                            <p class="mt-3 text-base text-gray-600">Otimização de SEO, criação de conteúdo e estratégias de monetização.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contato" class="py-20 md:py-24">
+        <section id="contato" class="py-20 md:py-24 animate-on-scroll">
             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Pronto para Começar?</h2>
-                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Pronto para Começar?</h2>
+                <p class="mt-4 text-xl font-medium text-gray-600 max-w-2xl mx-auto">
                     Não perca mais tempo. Aumente seu alcance, atraia novos clientes e transforme seu negócio com nossas estratégias digitais. Oferecemos atendimento online ou presencial para nos adaptarmos à sua necessidade.
                 </p>
-                <a href="mailto:iabras_digital@outlook.com.br" class="btn-primary mt-8">Entre em Contato Agora</a>
+                <a href="mailto:iabras_digital@outlook.com.br" class="btn-primary mt-10">Entre em Contato Agora</a>
             </div>
         </section>
     </main>
 
     <footer class="bg-gray-900 text-gray-300 py-12">
         <div class="container mx-auto px-4 text-center md:text-left">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-lg font-semibold text-white">IA BRAS DIGITAL</h3>
-                    <p class="mt-2 text-sm">São Luís - MA</p>
+                    <h3 class="text-lg font-semibold text-white border-b border-violet-600 inline-block pb-1">Contato Rápido</h3>
+                    <p class="mt-4 text-sm">São Luís - MA</p>
                     <p class="mt-2 text-sm">Email: iabrasdigital@protonmail.com</p>
-                    <p class="mt-2 text-sm flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2.87c-5.46 0-9.91 4.45-9.91 9.92 0 1.62.43 3.14 1.25 4.54l-1.31 4.79 4.93-1.29c1.32.74 2.8 1.15 4.93 1.15 5.46 0 9.91-4.45 9.91-9.92 0-5.46-4.45-9.91-9.91-9.91zm.01 1.5c4.64 0 8.41 3.77 8.41 8.41 0 4.64-3.77 8.41-8.41 8.41-1.42 0-2.81-.36-4.04-1.05l-2.9 0.76.77-2.82c-.75-1.28-1.15-2.73-1.15-4.18 0-4.65 3.78-8.41 8.41-8.41zm-2.03 3.99c-.19 0-.44-.06-.65-.06-.19 0-.21-.01-.42-.01-.22 0-.29-.02-.4-.06-.11-.04-.2-.08-.34-.11-.12-.03-.23-.04-.33-.04-.15 0-.27.02-.45.09-.16.06-.31.14-.42.2-.12.07-.23.15-.34.22-.11.07-.2.15-.29.21-.09.06-.15.11-.2.15l-.13.09c-.04.03-.07.06-.1.08-.1.07-.16.14-.2.17-.07.05-.15.1-.21.14-.14.1-.27.21-.38.31-.13.11-.27.24-.41.38-.13.13-.26.26-.39.4-.13.13-.24.27-.34.41-.09.13-.19.26-.27.39-.08.12-.15.24-.21.36-.06.12-.12.25-.17.39-.05.13-.1.27-.14.41s-.07.28-.09.43c-.02.15-.03.31-.03.48 0 .19.01.38.03.56.03.18.06.35.12.51.05.16.1.31.18.45.08.15.17.29.28.43.11.13.24.26.37.38.13.13.27.25.42.36.15.11.31.22.48.33.16.1.33.2.5.28.18.09.37.16.55.22.18.06.36.1.54.12.18.02.37.03.56.03.19 0 .38-.01.57-.03.19-.02.38-.05.58-.09.19-.05.38-.11.58-.19.19-.07.39-.16.59-.26.19-.11.39-.23.59-.36.2-.14.4-.28.58-.44.19-.15.37-.31.54-.48.17-.16.32-.33.45-.5.14-.17.26-.34.36-.51.1-.17.18-.34.25-.51.07-.17.12-.34.15-.51.03-.17.05-.34.05-.51s-.02-.34-.05-.51c-.03-.17-.08-.34-.15-.51-.07-.17-.15-.34-.25-.51-.1-.17-.22-.34-.36-.51-.13-.17-.28-.33-.45-.49-.17-.16-.36-.31-.56-.44-.2-.14-.41-.26-.62-.36-.21-.1-.43-.18-.65-.24-.23-.07-.46-.11-.69-.11zm-.02 8.78c-1.42 0-2.58-.99-2.58-2.22 0-1.22 1.16-2.21 2.58-2.21 1.41 0 2.58.99 2.58 2.21 0 1.23-1.17 2.22-2.58 2.22z" /></svg>
-                        (98) 9-8112-2395
+                    <p class="mt-2 text-sm flex items-center justify-center md:justify-start">
+                        <a href="https://wa.me/5598981122395" target="_blank" class="flex items-center hover:text-green-400 transition duration-300" aria-label="Enviar mensagem via WhatsApp para IA BRAS DIGITAL">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-green-500 whatsapp-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2.87c-5.46 0-9.91 4.45-9.91 9.92 0 1.62.43 3.14 1.25 4.54l-1.31 4.79 4.93-1.29c1.32.74 2.8 1.15 4.93 1.15 5.46 0 9.91-4.45 9.91-9.92 0-5.46-4.45-9.91-9.91-9.91zm.01 1.5c4.64 0 8.41 3.77 8.41 8.41 0 4.64-3.77 8.41-8.41 8.41-1.42 0-2.81-.36-4.04-1.05l-2.9 0.76.77-2.82c-.75-1.28-1.15-2.73-1.15-4.18 0-4.65 3.78-8.41 8.41-8.41zm-2.03 3.99c-.19 0-.44-.06-.65-.06-.19 0-.21-.01-.42-.01-.22 0-.29-.02-.4-.06-.11-.04-.2-.08-.34-.11-.12-.03-.23-.04-.33-.04-.15 0-.27.02-.45.09-.16.06-.31.14-.42.2-.12.07-.23.15-.34.22-.11.07-.2.15-.29.21-.09.06-.15.11-.2.15l-.13.09c-.04.03-.07.06-.1.08-.1.07-.16.14-.2.17-.07.05-.15.1-.21.14-.14.1-.27.21-.38.31-.13.11-.27.24-.41.38-.13.13-.26.26-.39.4-.13.13-.24.27-.34.41-.09.13-.19.26-.27.39-.08.12-.15.24-.21.36-.06.12-.12.25-.17.39-.05.13-.1.27-.14.41s-.07.28-.09.43c-.02.15-.03.31-.03.48 0 .19.01.38.03.56.03.18.06.35.12.51.05.16.1.31.18.45.08.15.17.29.28.43.11.13.24.26.37.38.13.13.27.25.42.36.15.11.31.22.48.33.16.1.33.2.5.28.18.09.37.16.55.22.18.06.36.1.54.12.18.02.37.03.56.03.19 0 .38-.01.57-.03.19-.02.38-.05.58-.09.19-.05.38-.11.58-.19.19-.07.39-.16.59-.26.19-.11.39-.23.59-.36.2-.14.4-.28.58-.44.19-.15.37-.31.54-.48.17-.16.32-.33.45-.5.14-.17.26-.34.36-.51.1-.17.18-.34.25-.51.07-.17.12-.34.15-.51.03-.17.05-.34.05-.51s-.02-.34-.05-.51c-.03-.17-.08-.34-.15-.51-.07-.17-.15-.34-.25-.51-.1-.17-.22-.34-.36-.51-.13-.17-.28-.33-.45-.49-.17-.16-.36-.31-.56-.44-.2-.14-.41-.26-.62-.36-.21-.1-.43-.18-.65-.24-.23-.07-.46-.11-.69-.11zm-.02 8.78c-1.42 0-2.58-.99-2.58-2.22 0-1.22 1.16-2.21 2.58-2.21 1.41 0 2.58.99 2.58 2.21 0 1.23-1.17 2.22-2.58 2.22z" /></svg>
+                            (98) 9-8112-2395
+                        </a>
                     </p>
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold text-white">Links Rápidos</h3>
-                    <ul class="mt-2 text-sm space-y-2">
-                        <li><a href="#servicos" class="hover:text-white transition duration-300">Serviços</a></li>
-                        <li><a href="#criação-de-sites" class="hover:text-white transition duration-300">Criação de Sites</a></li>
-                        <li><a href="#sobre-nos" class="hover:text-white transition duration-300">Sobre Nós</a></a></li>
-                        <li><a href="blog.html" class="hover:text-white transition duration-300">Nosso Blog</a></li>
-                        <li><a href="#portfolio" class="hover:text-white transition duration-300">Portfólio</a></li>
-                        <li><a href="#contato" class="hover:text-white transition duration-300">Contato</a></li>
+                    <h3 class="text-lg font-semibold text-white border-b border-violet-600 inline-block pb-1">Navegação</h3>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="#servicos" class="hover:text-violet-400 transition duration-300">Serviços</a></li>
+                        <li><a href="#criação-de-sites" class="hover:text-violet-400 transition duration-300">Criação de Sites</a></li>
+                        <li><a href="#portfolio" class="hover:text-violet-400 transition duration-300">Portfólio</a></li>
+                        <li><a href="blog.html" class="hover:text-violet-400 transition duration-300">Nosso Blog</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="text-lg font-semibold text-white">Compartilhe</h3>
-                    <div class="mt-2 flex justify-center md:justify-start space-x-4">
+                    <h3 class="text-lg font-semibold text-white border-b border-violet-600 inline-block pb-1">Informações Legais</h3>
+                    <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="#sobre-nos" class="hover:text-violet-400 transition duration-300">Sobre Nós</a></li>
+                        <li><a href="acordo-preliminar-servicos.html" class="hover:text-violet-400 transition duration-300">Acordo Preliminar de Serviços</a></li>
+                        <li><a href="politica-privacidade.html" class="text-violet-400 font-bold transition duration-300">Política de Privacidade</a></li>
+                        <li><a href="termos-de-uso.html" class="hover:text-violet-400 transition duration-300">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                 
+                 <div class="md:col-span-1">
+                    <h3 class="text-lg font-semibold text-white border-b border-violet-600 inline-block pb-1">Nossa Missão</h3>
+                    <p class="mt-4 text-sm leading-relaxed">
+                        Somos a **IA BRAS DIGITAL**. Nascemos para **alavancar o seu negócio** com estratégias inteligentes de **SEO** e **Inteligência Artificial**, focadas em **resultados e alta conversão**.
+                    </p>
+                    <div class="mt-4 flex justify-center md:justify-start space-x-4">
                         <a href="https://api.whatsapp.com/send?text=Confira o site da IA BRAS DIGITAL, a agência que transforma sua presença online: https://iabrasdigital.online/" target="_blank" class="hover:text-white transition duration-300" aria-label="Compartilhar no WhatsApp">
                             <svg class="h-6 w-6 whatsapp-icon" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12.04 2.87c-5.46 0-9.91 4.45-9.91 9.92 0 1.62.43 3.14 1.25 4.54l-1.31 4.79 4.93-1.29c1.32.74 2.8 1.15 4.93 1.15 5.46 0 9.91-4.45 9.91-9.92 0-5.46-4.45-9.91-9.91-9.91zm.01 1.5c4.64 0 8.41 3.77 8.41 8.41 0 4.64-3.77 8.41-8.41 8.41-1.42 0-2.81-.36-4.04-1.05l-2.9 0.76.77-2.82c-.75-1.28-1.15-2.73-1.15-4.18 0-4.65 3.78-8.41 8.41-8.41zm-2.03 3.99c-.19 0-.44-.06-.65-.06-.19 0-.21-.01-.42-.01-.22 0-.29-.02-.4-.06-.11-.04-.2-.08-.34-.11-.12-.03-.23-.04-.33-.04-.15 0-.27.02-.45.09-.16.06-.31.14-.42.2-.12.07-.23.15-.34.22-.11.07-.2.15-.29.21-.09.06-.15.11-.2.15l-.13.09c-.04.03-.07.06-.1.08-.1.07-.16.14-.2.17-.07.05-.15.1-.21.14-.14.1-.27.21-.38.31-.13.11-.27.24-.41.38-.13.13-.26.26-.39.4-.13.13-.24.27-.34.41-.09.13-.19.26-.27.39-.08.12-.15.24-.21.36-.06.12-.12.25-.17.39-.05.13-.1.27-.14.41s-.07.28-.09.43c-.02.15-.03.31-.03.48 0 .19.01.38.03.56.03.18.06.35.12.51.05.16.1.31.18.45.08.15.17.29.28.43.11.13.24.26.37.38.13.13.27.25.42.36.15.11.31.22.48.33.16.1.33.2.5.28.18.09.37.16.55.22.18.06.36.1.54.12.18.02.37.03.56.03.19 0 .38-.01.57-.03.19-.02.38-.05.58-.09.19-.05.38-.11.58-.19.19-.07.39-.16.59-.26.19-.11.39-.23.59-.36.2-.14.4-.28.58-.44.19-.15.37-.31.54-.48.17-.16.32-.33.45-.5.14-.17.26-.34.36-.51.1-.17.18-.34.25-.51.07-.17.12-.34.15-.51.03-.17.05-.34.05-.51s-.02-.34-.05-.51c-.03-.17-.08-.34-.15-.51-.07-.17-.15-.34-.25-.51-.1-.17-.22-.34-.36-.51-.13-.17-.28-.33-.45-.49-.17-.16-.36-.31-.56-.44-.2-.14-.41-.26-.62-.36-.21-.1-.43-.18-.65-.24-.23-.07-.46-.11-.69-.11zm-.02 8.78c-1.42 0-2.58-.99-2.58-2.22 0-1.22 1.16-2.21 2.58-2.21 1.41 0 2.58.99 2.58 2.21 0 1.23-1.17 2.22-2.58 2.22z" /></svg>
@@ -421,6 +420,7 @@
                         </a>
                     </div>
                 </div>
+
             </div>
             
             <hr class="border-gray-700 my-8">
@@ -432,6 +432,7 @@
     </footer>
 
     <script>
+        // Lógica do Menu Mobile
         document.getElementById('menu-button').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.remove('-translate-x-full');
         });
@@ -446,24 +447,44 @@
             });
         });
 
-        // Adiciona a classe 'animated-hero-text' para iniciar a animação após o carregamento
+        // Lógica de Animação ao Rolar (Scroll Spy / Intersect Observer)
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.2 // 20% do elemento visível
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Opcional: Para executar a animação apenas uma vez
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Aplica o observer a todas as seções que devem ter a transição
+        document.querySelectorAll('.animate-on-scroll').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Remove o CSS de opacidade para a Hero Section, permitindo a animação
         document.querySelectorAll('.animated-hero-text, .animated-hero-btn').forEach(el => {
             el.style.opacity = '1';
         });
     </script>
-    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/68d2207e9a4a9819287401ae/1j5qcts3e';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
+    
+    <script type="text/plain" data-cookieconsent="marketing">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/68d2207e9a4a9819287401ae/1j5qcts3e';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
 </body>
 </html>
