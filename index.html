@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -158,9 +158,10 @@
                     class="text-violet-600 font-extrabold hover:text-violet-800 transition duration-300">Blog</a>
             </nav>
 
-            <button id="menu-button" class="md:hidden text-gray-700 hover:text-violet-600 focus:outline-none">
+            <button id="menu-button" class="md:hidden text-gray-700 hover:text-violet-600 focus:outline-none"
+                aria-label="Abrir menu de navegação">
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    ...
                 </svg>
             </button>
         </div>
@@ -290,7 +291,7 @@
                             Analisamos seu negócio e criamos um plano de ação completo para otimizar sua estratégia
                             online.
                         </p>
-                        <a href="blog.html#artigo-consultoria" class="btn-primary mt-6">Saiba Mais</a>
+                        <a href="blog.html#artigo-consultoria" class="btn-primary mt-6" aria-label>Saiba Mais</a>
                     </div>
 
                     <div class="bg-white p-10 rounded-2xl shadow-xl card-hover-effect">
@@ -317,7 +318,10 @@
                     rápidos, responsivos e otimizados para qualquer dispositivo e navegador.
                 </p>
                 <p>
-                    <a href="blog.html" class="saiba-mais-link">Saiba Mais</a>
+                <p>
+                    <a href="blog.html" class="saiba-mais-link"
+                        aria-label="Saiba Mais sobre Criação de Sites Modernos">Saiba Mais</a>
+                </p>
                 </p>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white p-10 rounded-2xl shadow-xl card-hover-effect">
