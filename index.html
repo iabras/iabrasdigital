@@ -16,9 +16,21 @@
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap">
+    </noscript>
 
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </noscript>
 
     <style>
         /* Define a fonte Poppins como padrão para todo o corpo */
@@ -42,11 +54,7 @@
 
             /* Mantém os efeitos de transição e sombra */
             @apply transition duration-500 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl;
-
-            /* No hover, a borda pode ser mantida com a mesma cor ou um tom mais escuro. */
-            /* Para o hover, o efeito visual será a sombra e o deslocamento. */
         }
-
 
         /* Animações (Hero Text, etc.) */
         .animated-hero-text {
@@ -119,8 +127,9 @@
             border: none !important;
         }
     </style>
+
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="6609b872-4959-4d99-bed9-16434848e82a"
-        data-blockingmode="auto" type="text/javascript"></script>
+        data-blockingmode="auto" type="text/javascript" defer></script>
 </head>
 
 <body class="text-gray-900">
@@ -544,11 +553,6 @@
                             class="text-gray-300 hover:text-white transition duration-300"
                             aria-label="Compartilhar no LinkedIn">
                             <i class="fab fa-linkedin"></i>
-
-
-
-
-
                         </a>
                     </div>
                 </div>
@@ -614,14 +618,18 @@
         (function () {
             var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
             s1.async = true;
+            
+            // CORREÇÃO 5: TAWK.TO DEFER 
+            // Adicionado 'defer' para garantir que ele não atrase a renderização.
+            s1.defer = true;
+            
             s1.src = 'https://embed.tawk.to/68d2207e9a4a9819287401ae/1j5qcts3e';
             s1.charset = 'UTF-8';
             s1.setAttribute('crossorigin', '*');
             s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</body>
+
+    </body>
 
 </html>
